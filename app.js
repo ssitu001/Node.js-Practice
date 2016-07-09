@@ -9,6 +9,12 @@ app.set('view engine', 'ejs');
 var campgrounds = [
   {name: "Yosemite", image: "https://upload.wikimedia.org/wikipedia/commons/0/06/Yosemite_USA.JPG"},
   {name: "Sedona", image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR6HTjpOt9EISK7ISqzasZPdHJPsYM7bW9uP9v1YtppVzewFFoGQg"},
+  {name: "Mt Zion", image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRtvx9mnuG1-s5iTQi3W-AFtubttGFqu_WwE962AHL34B8svHMeCqNNp3nL"},
+  {name: "Yosemite", image: "https://upload.wikimedia.org/wikipedia/commons/0/06/Yosemite_USA.JPG"},
+  {name: "Sedona", image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR6HTjpOt9EISK7ISqzasZPdHJPsYM7bW9uP9v1YtppVzewFFoGQg"},
+  {name: "Mt Zion", image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRtvx9mnuG1-s5iTQi3W-AFtubttGFqu_WwE962AHL34B8svHMeCqNNp3nL"},
+  {name: "Yosemite", image: "https://upload.wikimedia.org/wikipedia/commons/0/06/Yosemite_USA.JPG"},
+  {name: "Sedona", image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR6HTjpOt9EISK7ISqzasZPdHJPsYM7bW9uP9v1YtppVzewFFoGQg"},
   {name: "Mt Zion", image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRtvx9mnuG1-s5iTQi3W-AFtubttGFqu_WwE962AHL34B8svHMeCqNNp3nL"}
 ];
 
