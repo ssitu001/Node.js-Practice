@@ -26,6 +26,7 @@ app.post('/campgrounds', function(req, res) {
   res.send("post!")
 });
 
+console.log()
 
 
 app.listen(3000, function () {
