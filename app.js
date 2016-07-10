@@ -17,17 +17,17 @@ var campgroundSchema = new mongoose.Schema({
 
 var Campground = mongoose.model('campground', campgroundSchema);
 
-Campground.create({
-  name: "Yosemite",
-  image: "https://upload.wikimedia.org/wikipedia/commons/0/06/Yosemite_USA.JPG",
-  description: "Best I ever had!"
-}, function(err, campground) {
-  if(err) {
-    console.log(err);
-  } else {
-    console.log(campground);
-  }
-});
+// Campground.create({
+//   name: "Yosemite",
+//   image: "https://upload.wikimedia.org/wikipedia/commons/0/06/Yosemite_USA.JPG",
+//   description: "Best I ever had!"
+// }, function(err, campground) {
+//   if(err) {
+//     console.log(err);
+//   } else {
+//     console.log(campground);
+//   }
+// });
 
 // var campgrounds = [
 //   {name: "Yosemite", image: "https://upload.wikimedia.org/wikipedia/commons/0/06/Yosemite_USA.JPG"},
@@ -51,7 +51,7 @@ app.get('/campgrounds', function(req, res) {
     if (err) {
       console.log(err);
     } else {
-      res.render('campgrounds', {campgrounds: allCampgrounds});
+      res.render('index', {campgrounds: allCampgrounds});
     }
   });
 });
@@ -62,15 +62,22 @@ app.get('/campgrounds/new', function(req, res) {
 
 //SHOW more info about one campground
 app.get('/campgrounds/:id', function(req, res) {
-  res.send('show page');
+  Campground.findById(req.params.id, function(err, foundCampground) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('show', {campgrounds: foundCampground});
+    }
+  });
 });
 
 
-
+//CREATE
 app.post('/campgrounds', function(req, res) {
   var name = req.body.name;
   var image = req.body.image;
-  var newCampground = {name: name, image: image};
+  var desc = req.body.description;
+  var newCampground = {name: name, image: image, description: desc};
   Campground.create(newCampground, function(err, campground) {
     if(err) {
       console.log(err);
